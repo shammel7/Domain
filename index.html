@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign in</title>
+  <title>Multi-Step Process</title>
   <style>
     body {
       margin: 0;
@@ -85,41 +85,36 @@
     // Step 1: Show Create Account after Sign In
     function handleSignIn(event) {
       event.preventDefault(); // Prevent form submission
-      console.log("Sign In Submitted");
       showContainer('create-account-container');
     }
 
     // Step 2: Show Login after Account Creation
     function handleCreateAccount(event) {
       event.preventDefault();
-      console.log("Create Account Submitted");
       showContainer('login-container');
     }
 
     // Step 3: Show Folder Management after Login
     function handleLogin(event) {
       event.preventDefault();
-      console.log("Login Submitted");
       showContainer('folder-container');
     }
 
     // Step 4: Show Logout after Folder Management
     function handleFileUpload(event) {
       event.preventDefault();
-      console.log("File Upload Clicked");
+      // Simulate file upload and proceed
       showContainer('logout-container');
     }
 
     // Step 5: Log out and show Sign In again
     function handleLogout(event) {
       event.preventDefault();
-      console.log("Logged out");
       showContainer('signin-container');
     }
 
     // Set the initial container (Sign In)
     document.addEventListener('DOMContentLoaded', () => {
-      console.log("Page Loaded");
       showContainer('signin-container');
     });
   </script>
